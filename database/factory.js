@@ -14,14 +14,15 @@
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 const Factory = use("Factory");
 
+// Seed Fake Users
 Factory.blueprint("App/Models/User", (faker) => {
   return {
-    username: "aldrinpeter",
-    email: "aldrindeguzman1998@gmail.com",
-    password: "Redflyer-1998",
-    firstname: "Aldrin",
-    lastname: "De Guzman",
+    username: faker.username(),
+    email: faker.email(),
+    password: faker.password(),
+    firstname: faker.first(),
+    lastname: faker.last(),
     is_active: 1,
-    is_admin: 1,
+    is_admin: 0,
   };
 });

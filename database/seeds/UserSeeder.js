@@ -16,7 +16,9 @@ const Factory = use("Factory");
 class UserSeeder {
   async run() {
     console.log("Seeding User Table");
-    await Factory.model("App/Models/User").createMany(1);
+
+    // Seed 5 users
+    await Factory.model("App/Models/User").createMany(5);
   }
 }
 
