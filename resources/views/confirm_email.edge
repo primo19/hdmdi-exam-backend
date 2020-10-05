@@ -1,0 +1,9 @@
+<p>Hi {{ username }}</p>
+
+<p>
+  Welcome to Event Managment App, Please confirm your email address by clicking the link below:
+</p>
+
+<p>
+  <a href="{{ 'localhost:3333/user/confirm/' + confirmation_token }}">Confirm Email Address</a>
+</p>
