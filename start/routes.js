@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,16 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use("Route");
+const Database = use("Database");
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
-})
+// Test Index Route
+Route.get("/", () => {
+  return { greeting: "Hello world in JSON" };
+});
+
+// Test DB Connection Route
+Route.get("/db", async () => {
+  console.log("No DB Connection Error");
+  return await Database.table("users").select("*");
+});
