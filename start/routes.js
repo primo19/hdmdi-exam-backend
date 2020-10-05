@@ -27,3 +27,11 @@ Route.get("/db", async () => {
   console.log("No DB Connection Error");
   return await Database.table("users").select("*");
 });
+
+// User API Routes
+Route.get("/user/list", "UserController.index");
+Route.post("/user/register", "UserController.register");
+
+// Event API Routes
+Route.get("/event/list", "EventController.index");
+Route.post("/event/add", "EventController.add");
