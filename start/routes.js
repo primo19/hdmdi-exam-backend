@@ -30,6 +30,8 @@ Route.get("/db", async () => {
 
 // User API Routes
 Route.get("/user/list", "UserController.index");
+Route.get("/user/confirm/:token", "UserController.confirmEmail");
+Route.post("/user/login", "UserController.login");
 Route.post("/user/register", "UserController.register");
 
 // Event API Routes
