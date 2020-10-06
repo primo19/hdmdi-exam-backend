@@ -36,4 +36,7 @@ Route.post("/user/register", "UserController.register");
 
 // Event API Routes
 Route.get("/event/list", "EventController.index");
+Route.get("/event/:id", "EventController.show");
 Route.post("/event/add", "EventController.add");
+Route.patch("/event/:id", "EventController.update");
+Route.delete("/event/:id", "EventController.destroy");

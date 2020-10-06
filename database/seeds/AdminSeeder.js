@@ -27,7 +27,6 @@ class AdminSeeder {
         firstname: "Aldrin",
         lastname: "De Guzman",
         is_active: 1,
-        is_admin: 1,
       };
     });
 

@@ -14,7 +14,6 @@ class UserSchema extends Schema {
       table.string("lastname", 40).notNullable();
       table.string("confirmation_token");
       table.boolean("is_active").defaultTo(0);
-      table.boolean("is_admin").defaultTo(0);
       table.timestamps();
     });
   }

@@ -23,6 +23,12 @@ Factory.blueprint("App/Models/User", (faker) => {
     firstname: faker.first(),
     lastname: faker.last(),
     is_active: 1,
-    is_admin: 0,
+  };
+});
+
+Factory.blueprint("App/Models/Event", (faker) => {
+  return {
+    title: faker.word(),
+    description: faker.sentence(),
   };
 });
